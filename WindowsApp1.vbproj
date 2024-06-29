@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB24AFF7-1AB6-4745-B0AF-F900560C2512}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApp1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApp1</RootNamespace>
+    <AssemblyName>WindowsApp1</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WindowsApp1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WindowsApp1.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'x86|AnyCPU'">
+    <OutputPath>bin\x86\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.6, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.6\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBooking.Designer.vb">
+      <DependentUpon>FrmBooking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBooking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBuku.Designer.vb">
+      <DependentUpon>FrmBuku.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDonasi.Designer.vb">
+      <DependentUpon>FrmDonasi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDonasi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKembali.Designer.vb">
+      <DependentUpon>FrmKembali.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKembali.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLihatPinjam.Designer.vb">
+      <DependentUpon>FrmLihatPinjam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLihatPinjam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMahasiswa.Designer.vb">
+      <DependentUpon>FrmMahasiswa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMahasiswa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMaster.Designer.vb">
+      <DependentUpon>FrmMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMember.Designer.vb">
+      <DependentUpon>FrmMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMenu.Designer.vb">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPenerbit.Designer.vb">
+      <DependentUpon>FrmPenerbit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPenerbit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDonatur.Designer.vb">
+      <DependentUpon>FrmDonatur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDonatur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerpanjangMember.Designer.vb">
+      <DependentUpon>FrmPerpanjangMember.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerpanjangMember.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPinjam.Designer.vb">
+      <DependentUpon>FrmPinjam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPinjam.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegister.Designer.vb">
+      <DependentUpon>FrmRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRuangan.Designer.vb">
+      <DependentUpon>FrmRuangan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRuangan.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="perpustakaanDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet6.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="perpustakaanDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>perpustakaanDataSet9.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmBooking.resx">
+      <DependentUpon>FrmBooking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBuku.resx">
+      <DependentUpon>FrmBuku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDonasi.resx">
+      <DependentUpon>FrmDonasi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDonatur.resx">
+      <DependentUpon>FrmDonatur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKembali.resx">
+      <DependentUpon>FrmKembali.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLihatPinjam.resx">
+      <DependentUpon>FrmLihatPinjam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMahasiswa.resx">
+      <DependentUpon>FrmMahasiswa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMaster.resx">
+      <DependentUpon>FrmMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMember.resx">
+      <DependentUpon>FrmMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMenu.resx">
+      <DependentUpon>FrmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPenerbit.resx">
+      <DependentUpon>FrmPenerbit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerpanjangMember.resx">
+      <DependentUpon>FrmPerpanjangMember.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPinjam.resx">
+      <DependentUpon>FrmPinjam.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegister.resx">
+      <DependentUpon>FrmRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRuangan.resx">
+      <DependentUpon>FrmRuangan.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="perpustakaanDataSet.xsc">
+      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet.xss">
+      <DependentUpon>perpustakaanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet1.xsc">
+      <DependentUpon>perpustakaanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet1.xss">
+      <DependentUpon>perpustakaanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet2.xsc">
+      <DependentUpon>perpustakaanDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet2.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet2.xss">
+      <DependentUpon>perpustakaanDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet3.xsc">
+      <DependentUpon>perpustakaanDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet3.xss">
+      <DependentUpon>perpustakaanDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet4.xsc">
+      <DependentUpon>perpustakaanDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet4.xss">
+      <DependentUpon>perpustakaanDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet5.xsc">
+      <DependentUpon>perpustakaanDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet5.xss">
+      <DependentUpon>perpustakaanDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet6.xsc">
+      <DependentUpon>perpustakaanDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet6.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet6.xss">
+      <DependentUpon>perpustakaanDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet7.xsc">
+      <DependentUpon>perpustakaanDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet7.xss">
+      <DependentUpon>perpustakaanDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet8.xsc">
+      <DependentUpon>perpustakaanDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet8.xss">
+      <DependentUpon>perpustakaanDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet9.xsc">
+      <DependentUpon>perpustakaanDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="perpustakaanDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>perpustakaanDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="perpustakaanDataSet9.xss">
+      <DependentUpon>perpustakaanDataSet9.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
